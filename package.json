@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Personal website showing the professional portfolio.",
     "author": "Christian Vecchiola <christian.vecchiola@gmail.com>",
-    "license": "Apache 2.0", 
+    "license": "Apache 2.0",
     "scripts": {
         "css:fonts": "mkdir -p dist/webfonts && cp assets/css/fontawesome-all.min.css dist/ && cp assets/webfonts/* dist/webfonts/",
         "css:images": "mkdir -p dist/images && cp assets/css/images/overlay.png dist/images/",
@@ -34,6 +34,7 @@
         "node-sass": "^6.0.1",
         "npm-run-all": "^4.1.5",
         "onchange": "^7.1.0",
+        "postcss": "^8.3.6",
         "postcss-cli": "^8.3.1",
         "stylelint": "^13.13.1",
         "webpack": "^5.51.1",
