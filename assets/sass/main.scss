@@ -910,6 +910,13 @@ credits {
 			.container {
 				padding: 0 2em 0 2em;
 			}
+			
+			h2.alt {
+
+				margin-left: 4em;
+				margin-right: 4em;
+				
+			}
 
 		/* Icons */
 
@@ -974,6 +981,7 @@ credits {
 				margin-left: 20%;
 			}
 
+
 	}
 
 /* Narrower */
@@ -1002,6 +1010,13 @@ credits {
 
 			.container {
 				padding: 0 2em 0 2em;
+			}
+
+			h2.alt {
+
+				margin-left: 3em;
+				margin-right: 3em;
+				
 			}
 
 		/* Item */
@@ -1161,6 +1176,12 @@ credits {
 				font-size: 1.5em;
 				letter-spacing: 0;
 				font-weight: 300;
+
+				&.alt {
+
+					margin-left: 2em;
+					margin-right: 2em;
+				}
 			}
 
 			.container {
