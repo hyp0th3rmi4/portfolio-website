@@ -19,6 +19,4 @@ phases:
 # Webpack is configured to put the content in the `dist` folder,
 # we only need to copy that folder and strip the directory.
 artifacts:
-  files:
-    - "**/*"
-  base_directory: "dist"
+  base-directory: "dist"
