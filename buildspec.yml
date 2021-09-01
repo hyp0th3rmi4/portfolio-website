@@ -20,5 +20,5 @@ phases:
 # we only need to copy that folder and strip the directory.
 artifacts:
   files:
-    - "dist/**/*"
+    - "**/*"
   base-directory: "dist"
