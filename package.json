@@ -3,27 +3,21 @@
     "version": "1.0.0",
     "description": "Personal website showing the professional portfolio.",
     "author": "Christian Vecchiola <christian.vecchiola@gmail.com>",
-    "license": "Apache 2.0",
+    "license": "Apache 2.0", 
     "scripts": {
-
         "css:fonts": "mkdir -p dist/webfonts && cp assets/css/fontawesome-all.min.css dist/ && cp assets/webfonts/* dist/webfonts/",
         "css:images": "mkdir -p dist/images && cp assets/css/images/overlay.png dist/images/",
-
         "css:lint": "stylelint assets/sass/*.scss --syntax scss || true",
         "css:scss": "node-sass --output-style compressed -o dist assets/sass",
         "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
         "build:css": "npm run css:images && npm run css:fonts && npm run css:lint && npm run css:scss && npm run css:autoprefixer",
         "watch:css": "onchange \"assets/sass\" -- npm run build:css",
-
         "build:images": "imagemin images/** --out-dir=dist/images",
         "watch:images": "onchange \"src/images\" -- npm run build:images",
-
         "build:js": "webpack --mode=production",
         "watch:js": "onchange \"assets/js\" -- webpack --mode=development",
-
         "watch:html": "onchange \"*.html\" -- cp *.html dist/",
         "build:html": "mkdir -p dist && cp *.html dist/",
-
         "serve": "browser-sync start --server \"dist\" --files \"dist\"",
         "watch": "run-p serve watch:*",
         "build": "run-p build:*",
@@ -34,6 +28,8 @@
         "autoprefixer": "^10.3.3",
         "babel-loader": "^8.2.2",
         "browser-sync": "^2.27.5",
+        "eslint": "^7.32.0",
+        "eslint-loader": "^4.0.2",
         "imagemin-cli": "^7.0.0",
         "node-sass": "^6.0.1",
         "npm-run-all": "^4.1.5",

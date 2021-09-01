@@ -2,19 +2,24 @@ const { path } = require("vfile");
 const webpack = require("webpack");
 
 module.exports = {
-    entry: './assets/js/wrapper.js',
+    entry: "./assets/js/wrapper.js",
     output: {
-        path: __dirname + '/dist',
-        filename: 'bundle.js'
+        path: __dirname + "/dist",
+        filename: "bundle.js"
     },
     module: {
         rules: [{
+                enforce: "pre",
+                test: /.js$/,
+                exclude: /node_modules|\.min\.js$/,
+                loader: "eslint-loader"
+            },{
             test: /\.m?js$/,
             exclude: /node_modules/,
             use: {
-                loader: 'babel-loader',
+                loader: "babel-loader",
                 options: {
-                    presets: ['@babel/preset-env']
+                    presets: ["@babel/preset-env"]
                 }
             }
         }],
@@ -32,18 +37,18 @@ module.exports = {
     },
     resolve: {
         alias: {
-            'jquery': __dirname + '/assets/js/jquery.min.js',
-            'breakpoints': __dirname + '/assets/js/breakpoints.min.js'
+            "jquery": __dirname + "/assets/js/jquery.min.js",
+            "breakpoints": __dirname + "/assets/js/breakpoints.min.js"
         }
     },
     plugins: [
         // Provides jQuery for other JS bundled with Webpack 
         new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery'
+          $: "jquery",
+          jQuery: "jquery"
         }),
         new webpack.ProvidePlugin({
-            breakpoints: 'breakpoints'
+            breakpoints: "breakpoints"
         })
       ]
-}
+};
