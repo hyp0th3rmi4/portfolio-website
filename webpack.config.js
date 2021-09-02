@@ -13,7 +13,7 @@ module.exports = {
     entry: "./src/js/index.js",
     output: {
         path: path.join(__dirname, "/dist"),
-        filename: "js/[name].[hash].js"
+        filename: "js/[name].[fullhash].js"
     },
     module: {
         rules: [{
@@ -125,8 +125,8 @@ module.exports = {
         }),
         new ImageMinWebPackPlugin({ 
             test: /\.(jpe?g|png|gif|svg)$/i,
-            pngquant: ({ quality: "88-90" }),      
-            plugins: [ imageminMozjpeg({ quality: 80 }) ]
+            pngquant: ({ quality: "70-80" }),      
+            plugins: [ imageminMozjpeg({ quality: 70 }) ]
 
         })
 
