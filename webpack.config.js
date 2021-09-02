@@ -105,7 +105,7 @@ module.exports = {
             chunkFilename: "css/[id].css"
         }),
         new HtmlWebpackPlugin({
-          hash: false,
+          hash: true,
           inject: "body",
           template: "./src/templates/index.hbs",
           templateParameters: require(path.join(__dirname, "/src/data/profile.json"))
