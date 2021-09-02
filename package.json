@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "Personal website showing the professional portfolio.",
     "author": "Christian Vecchiola <christian.vecchiola@gmail.com>",
-    "license": "Apache 2.0",
+    "license": "Apache-2.0",
+    "repository" : "https://github.com/hyp0th3rmi4/portfolio-website",
     "browserslist": [
         "> 1%",
         "last 2 versions",
