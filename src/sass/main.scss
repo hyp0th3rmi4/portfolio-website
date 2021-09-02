@@ -4,7 +4,7 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
-@import url("fontawesome-all.min.css");
+@import '../css/fontawesome-all.min.css';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
 /*
@@ -547,7 +547,7 @@ credits {
 			text-align: left;
 			padding: 0.5em 1em 0.5em 1em;
 			color: #fff;
-			background: #222729 url('images/overlay.png');
+			background: #222729 url('../css/images/overlay.png');
 		}
 
 		thead {
@@ -576,7 +576,7 @@ credits {
 		background-color: #e27689;
 		border: 0;
 		cursor: pointer;
-		@include vendor('background-image', ('linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))', 'url("images/overlay.png")'));
+		@include vendor('background-image', ('linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))', 'url("../css/images/overlay.png")'));
 		@include vendor('transition', 'background-color 0.35s ease-in-out');
 
 		&:hover {
@@ -639,7 +639,7 @@ credits {
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'space-between');
-		background: #222629 url('images/overlay.png');
+		background: #222629 url('../css/images/overlay.png');
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
 		color: #fff;
 		height: 100%;
@@ -797,7 +797,7 @@ credits {
 			min-height: 100vh;
 			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
 			text-align: center;
-			background-image: url('images/overlay.png');
+			background-image: url('../css/images/overlay.png');
 
 			&.dark {
 				color: #ddd;
@@ -830,7 +830,7 @@ credits {
 
 			&.one {
 				background-color: #81918e;
-				background-image: url('../../images/cover.png');
+				background-image: url('../images/cover.png');
 			}
 
 			&.two {
@@ -1050,7 +1050,7 @@ credits {
 				width: _size(header);
 				z-index: _misc(z-index-base) + 2;
 				width: _size(header);
-				background: #222729 url('images/overlay.png');
+				background: #222729 url('../css/images/overlay.png');
 				box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
 
 				.top {
