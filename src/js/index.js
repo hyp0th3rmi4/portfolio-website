@@ -1,5 +1,7 @@
 /*eslint no-unused-vars: ["error", { "varsIgnorePattern": "\$|breakpoints" }]*/
 
+import "../sass/main.scss";
+
 var $ = require("jquery");
 import "./jquery.scrolly.min.js";
 import "./jquery.scrollex.min.js";

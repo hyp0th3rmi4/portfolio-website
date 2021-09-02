@@ -1,0 +1,148 @@
+{
+    "metadata" : {
+        "title" : "Christian Vecchiola"
+    },
+    "profile" : {
+        "name" : "Christian Vecchiola",
+        "role" : {
+            "short" : "Technical Leader",
+            "long" : "Technical leader, engineer, solution architect, <br /> problem solver, and life-long learner."
+        },
+        "about" : {
+            "tagLine" : "I build systems to solve practical problems and lead people to achieve their best.",
+            "description" : [
+                "I am a builder at heart. I like to understand how things work, to thinker with things and to build stuff whether it is software, carpentry or any other creative effort. I love to architect, design, and implement systems that solve practical problems, and challenge myself to become a better professional and human. I recognise the value of working with peers to achieve even greater things and do it with fun for the benefit of everyone.",
+                "I have been building distributed systems for more than 18 years, with a variety of technologies, people, and organisation. This has allowed me not only to be experienced software engineer and solution architect but also a technical leader able to engage stakeholders at all levels, translate business objectives into technical roadmaps and enable my peers to deliver with success. I have successfully done this with both small and large distributed teams with different cultures and backgrounds.",
+                "While today my primary focus is the design and architecture of system, I still value the importance of retaining an hands-on attitude and actively contribute whenever possible to the development efforts in the project that I am involved, to both support my team and learn new things from them.",
+                "I have a passion for mentoring and empowering people to deliver their best, besides the desire of understanding things deeply, I also have the passion to transfer this knowledge to others. This led me to mentor several team members, teach at Universities distributed computing topics, write a book, and gave invited talks.",
+                "I look forward to the new adventure and to build something great together."
+            ],
+            "contact" : [
+                "The easiest way to get in contact with me is to send me a private message on Linkedin. Here is my <a href=\"https://www.linkedin.com/in/christianvecchiola/\">profile</a>."
+            ]
+        },
+        "social" : [{
+            "name" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/christianvecchiola/",
+            "icon" : "fa-linkedin"
+        },{
+            "name" : "Medium",
+            "url" : "https://hyp0th3rmi4.medium.com/",
+            "icon" : "fa-medium"
+
+        },{
+            "name" : "GitHub",
+            "url" : "https://github.com/hyp0th3rmi4",
+            "icon" : "fa-github"
+
+        }]
+
+    },
+    "highlights" : [{
+        "id": "top",
+        "icon": "fa-home",
+        "name": "Welcome",
+        "reference": "#top"
+    },{
+        "id": "about",
+        "icon": "fa-user",
+        "name": "About Me",
+        "reference": "#about"
+    },{
+        "id": "projects",
+        "icon": "fa-th",
+        "name": "Projects",
+        "reference": "#projects"
+    },{
+        "id": "accolades",
+        "icon": "fa-award",
+        "name" : "Accolades",
+        "reference": "#accolades"
+    },{
+        "id": "contact",
+        "icon": "fa-envelope",
+        "name" : "Contact",
+        "reference": "#contact"
+    }],
+    "work" : {
+        "description" : "I have been thinkering with distributed systems for more than 18 years. This is a selection of the most interesting and relevant projects I have been working on. Recently, my focus has been the use of Blockchain technologies to support enterprise use cases in the financial services domain.",
+        "projects" : [{
+            "id" :  "lygon",
+            "name" : "Lygon",
+            "picture" : "prj-lygon.jpg",
+            "tags" : [ "Blockchain", "Microservices", "Kubernetes", "Financial Services" ],
+            "description": [ 
+                "<a href=\"https://lygon.io\">Lygon.io</a> is a platform that digitises the life-cycle of bank guarantees through the use of distributed ledger technologies. Letter of guarantees are a financial instrument where an institution (i.e. the <em>issuer</em>) unconditionally undertakes the responsibility of paying a party (i.e. the <em>beneficiary</em>) in case of default of another party (i.e. the <em>applicant</em>). These are commonly used to ensure the certainty of payment and provide financial backing for many business processes today, one of the most common use case being commercial real estate.",
+                "Before Lygon the process of issuing and managing bank guarantees, was essentially based on paper, and suffered from inefficiencies, delays, as well as potential risk of fraud. Moreover, different terms and conditions adopted by the various issuers caused additional burden to applicants and beneficiaries. By converting the letter of guarantees into smart contract Lygon significantly improves the creation and management of letter of guarantees, reducing the time to issue a letter of guarantee from the average 31 days to 1 day. The use of distributed ledger technologies provide full traceability of events in platform that includes a network of issuers.",
+                "The platform is the result of a collaboration of IBM and three of the major Australian banks, and it operates now in production since first quarter 2021. I contributed to the ideation, design, and development of Lygon since its pilot days by wearing different hats. As a solution architect and responsible for the technical delivery I set out the technical foundations and the architecture of the platform, contributed to the refinement of use cases and led stakeholder engagement sessions to gather requirements or educate peers on the technical design of the platform and its underlying technologies. As a solution architect and principal engineer I have contributed to the planning of the technical delivery during its pathway to production, help setting up development operation, automated testing, improved the development environment experience, created and maintained the technical documentation, and develop new capabilities, and led the team to address the technical spike."
+            ]
+        },{
+            "id" : "chaincode-haskell",
+            "name" : "Fabric Chaincode Haskell",
+            "picture" : "prj-chaincode-haskell.jpg",
+            "tags" : [ "Blockchain", "Haskell", "Hyperledger Fabric" ],
+            "description" : [
+                "<a href=\"https://github.com/hyperledger-labs/fabric-chaincode-haskell\">Fabric Chaincode Haskell</a> is an open source project under the umbrella of the Hyperledger Labs that brings the power of functional programming in Hyperledger Fabric by introducing the ability of writing smart contract in Haskell. Haskell is one of the most popular functional programming languages and the its characteristics make it quite well suite to write smart contracts since it has better support for formal verification than object oriented languages which are the most popular options avaialble to write smart contract for Hyperledger Fabric (Java, Golang, and Javascript).",
+                "The project started as an idea to better learn the Haskell language and contribute to Fabric and then developed into something that gathered further interest. Most of the implementation has been done by the excellent <a href=\"https://github.com/nwaywood\">Nick Waywood</a> and <a href=\"https://github.com/airvin\">Allison Irvin</a>, who took responsibility of the implementation of the chaincode  stub in Haskell. I have contributed to the project by reverse engineering the peer-chaincode communication protocol as well as the integration of a new language into the fabric runtime. I also wrote the initial scaffold interface of the stub to jumpstart the implementation and provide all the bindings necessary for the interaction.",
+                "If you are interested to learn more about the project, you can visit the <a href=\"https://github.com/hyperledger-labs/fabric-chaincode-haskell\">GitHub repository</a>, or watch the <a href=\"https://www.youtube.com/watch?v=Y-vMHbH4vVI\">Youtube video</a> of the related talk in the Hyperledger Forum."
+            ]
+        },{
+            "id" : "shared-kyc",
+            "name" : "Shared KYC",
+            "picture" : "prj-shared-kyc.jpg",
+            "tags" : [ "Blockchain", "Microservices", "Kubernetes", "Financial Services", "Golang", "React", "Node" ],
+            "description" : [
+                "Know Your Customer (KYC) is an essential process that financial institution are required to undertake to onboard customers and provide them with financial services. The process entails the verification of the identity of the customer (an individual or a company) for the purpose of ensuring that the provision of services to the individual or the entity does not facilitate or support illegal activities (e.g. money laundering, terrorism, ...). This process is very much time consuming and inefficient, thus preventing the banks from promptly delivering their services to customers. While the KYC process for a single individual may entail the verification of a few documents providing proof of identity, the KYC process for a company it is rather complex and requires not only the verification of the identity of key stakeholders, but also the analysis and verification a significant large number of company documents. Moreover, as large companies do interact with multiple financial institutions this activity is multiplied and does not only affect onboarding, but also the requires intervention whenever key stakeholders in the company change.",
+                "Shared KYC aims to optimise this process by providing mechanisms for financial institution to securely exchange KYC information about individual/entities for the purpose of streamlining and reducing the time required to onboard customers. The use of Blockchain technology in this space was one of the first enterprise use cases explored besides payments. The essential idea is to use distributed ledger technologies to keep a record of the KYC records of customers/companies and make them available to those entities that need it. The objective here is to reduce the time taken to onboard entities when trust can be given to the information stored in the network.",
+                "As of today, there are several <a href=\"https://www.ledgerinsights.com/tag/kyc/\">Blockchain-based Shared KYC initiatives</a> at different levels of maturity. In 2017-2018, IBM engaged with major financial instititions such as Deutsche Bank, HSBC in Singapore to develop a Blockchain platform supporting KYC processes for corporate institutions. The project involved different divisions of IBM in Singapore, Australia, and United States. I was fortunate enough to lead the team in Australia that participated in the project and made a core contribution to the development of the original platform. My responsibilities included solution design, development operation uplifting, engagement with stakeholders to educate and familiarise the technical solution, and run the day-to-day planning for my team."
+            ]
+        },{
+            "id" : "weaver",
+            "name" : "Hyperledger Weaver",
+            "picture" : "prj-weaver.jpg",
+            "tags" : [ "Blockchain", "Distributed Algorithms", "Protocol Specification", "Security and Cryptography", "Kubernetes", "Ansible", "Rust", "Kotlin" ],
+            "description" : [
+                "<a href=\"https://github.com/hyperledger-labs/weaver-dlt-interoperability\">Hyperleder Weaver</a> is a framework for enabling interoperability among distributed ledger implementations with minimum assumptions of trust and minimal intervention from intermediaries. It is comprised by a protocol suite defining the interoperability mechanisms and primitives, a definition of sytem components for the interoperation, and reference implementation of such components for the some of the most popular DLTs. The aim is to enable interoperation by means of an technology agnostic protocol that can be implemented by any system (e.g. blockchain or not). The project has recently been open sourced and became part of the <a href=\"https://www.hyperledger.org/blog/2021/06/09/meet-weaver-one-the-new-hyperledger-labs-projects-taking-on-cross-chain-and-off-chain-operations\">Hyperledger Labs family</a>.",
+                "The project is the result of a collaboration between IBM Research Australia and IBM Research India, as part of the team in Australia I have contributed to the design of the protocol, led the development operation initiatives supporting the project."
+            ]
+        },{
+            "id" : "hlf-internals",
+            "name" : "Hyperledger Unofficial Documentation",
+            "picture" : "prj-hlf-internals.jpg",
+            "tags" : [ "Blockchain", "Hyperledger Fabric", "Golang" ],
+            "description" : [
+                "Have you ever thought what it takes to build a smart contract runtime in Hyperledger Fabric to support a new language? Well I did :D and had a lot of fun discovering it. This project started as a spin-off from the <a href=\"#chaincode-haskell\">Fabric Chaincode Haskell</a> project. As we were developing the support for Haskell in Fabric, we needed to understand the internal implementation of Hyperledger Fabric, the lifecycle of the chaincode and its interaction with the other components of the system, as well as the communication protocol used to by the smart contract runtime environment to interact with the rest of the network. The level of detail necessary to support the implementation is not available in the official Fabric documentation and required me to reverse engineer it by inspecting the codebase and put the pieces together.",
+                "As a person driven by the desire of fully understand things, I dwelt into the codebase and eventually figured out the required information. I came to the realisation that what I discovered and put together could be of use to other people that have similar interests and decided to put it together in a form that is more accessible and consumable by other. This is led to the <a href=\"https://ibm.github.io/hlf-internals/\">Hyperledger Fabric Unofficial Documenation</a> website and its related assets being open sourced."
+            ]
+        },{
+            "id" : "aneka",
+            "name" : "Aneka",
+            "picture" : "prj-aneka.jpg",
+            "tags" : [ "Cloud", "Distributed Systems", "MapReduce", "Bag of Tasks", "Workflows", ".NET" ],
+            "description" : [
+                "<a href=\"https://www.manjrasoft.com/products.html\">Aneka</a> is a distributed programming platform that enables developers to implement distributed application with different programming models (i.e. bag of tasks, distributed threads, MapReduce, workflows, ...) by harnessing heterogeneous hardware both physical and virtual (i.e. cloud resources). This was one of the first projects that I worked on when I came to Australia, at a time where Cloud Computing technologies was in its early days and most and distributed computing applications were traditionally implemented on top of computing grids.",
+                "As a lead engineer for the platform my responsibility was to look after the overall solution design, implement core capabilities of the platform, engage with potential customer for demos, as well as develop applications on top of the platform services to demonstrate its potential. The core of my contribution was the design and implementation of the distributed algorithms to manage the distributed runtime, the support for different operating systems, as well as implementation of the distributed storage for application execution and remote installation."
+            ]
+        }],
+        "accolades": {
+            "description": "For the full list of my professional certification you can check my <a href=\"https://www.credly.com/users/christian-vecchiola/badges\">credly</a> profile. Here are just some of the most recent certifications.",
+            "badges" : [{
+                "name" : "AWS Certified Developer - Associate",
+                "issuer" : "Amazon Web Services Training and Certification",
+                "picture" : "https://images.credly.com/size/128x128/images/598f6ac6-2dbd-4394-8ae4-943b2f4c43ea/AWS-Developer-Associate-2020.png",
+                "url" : "https://www.credly.com/badges/0bfff6f3-87e5-4c3a-b7c4-588eb10431f9"
+            },{
+                "name" : "Certified Kubernetes Administrator",
+                "issuer" : "The Linux Foundation",
+                "picture" : "https://images.credly.com/size/128x128/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png",
+                "url" : "https://www.credly.com/badges/8738ab99-cf4e-4e93-a437-722bc9e3bc35"
+            },{
+                "name" : "AWS Certified Solution Architect - Associate",
+                "issuer" : "Amazon Web Services Training and Certification",
+                "picture" : "https://images.credly.com/size/128x128/images/4bc21d8b-4afe-4fbd-9a90-a9de8bf7b240/AWS-SolArchitect-Associate-2020.png",
+                "url" : "https://www.credly.com/badges/7947cb3d-235b-47a6-bcd4-98f96ab66832"
+            }]
+        
+        }
+    }
+}
