@@ -13,7 +13,7 @@ module.exports = {
     entry: "./src/js/index.js",
     output: {
         path: path.join(__dirname, "/dist"),
-        filename: "js/[name].[fullhash].js"
+        filename: "js/[name].[contenthash].js"
     },
     module: {
         rules: [{
@@ -101,11 +101,11 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "css/[name]-styles.css",
-            chunkFilename: "css/[id].css"
+            filename: "css/[name]-styles.[contenthash].css",
+            chunkFilename: "css/[id].[contenthash].css"
         }),
         new HtmlWebpackPlugin({
-          hash: true,
+          hash: false,
           inject: "body",
           template: "./src/templates/index.hbs",
           templateParameters: require(path.join(__dirname, "/src/data/profile.json"))
