@@ -1,19 +1,21 @@
-const { path } = require("vfile");
+const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 
 module.exports = {
     entry: "./assets/js/wrapper.js",
     output: {
-        path: __dirname + "/dist",
+        path: path.join(__dirname, "/dist"),
         filename: "bundle.js"
     },
     module: {
         rules: [{
-                enforce: "pre",
-                test: /.js$/,
-                exclude: /node_modules|\.min\.js$/,
-                loader: "eslint-loader"
-            },{
+            enforce: "pre",
+            test: /.js$/,
+            exclude: /node_modules|\.min\.js$/,
+            loader: "eslint-loader"
+        },{
             test: /\.m?js$/,
             exclude: /node_modules/,
             use: {
@@ -21,6 +23,13 @@ module.exports = {
                 options: {
                     presets: ["@babel/preset-env"]
                 }
+            }
+        },{
+            test: /.hbs$|.handlebars$/,
+            exclude: /node_modules/,
+            loader: "handlebars-loader",
+            options: {
+                helperDirs: [ path.join(__dirname, "/assets/helpers") ] 
             }
         }],
         // jQuery adds a global function $ and jQuery on which other scripts
@@ -37,11 +46,17 @@ module.exports = {
     },
     resolve: {
         alias: {
-            "jquery": __dirname + "/assets/js/jquery.min.js",
-            "breakpoints": __dirname + "/assets/js/breakpoints.min.js"
+            "jquery": path.join(__dirname, "/assets/js/jquery.min.js"),
+            "breakpoints": path.join(__dirname, "/assets/js/breakpoints.min.js")
         }
     },
     plugins: [
+        new HtmlWebpackPlugin({
+          hash: false,
+          inject: false,
+          template: "./index.hbs",
+          templateParameters: require(path.join(__dirname, "/assets/data/profile.json"))
+        }),
         // Provides jQuery for other JS bundled with Webpack 
         new webpack.ProvidePlugin({
           $: "jquery",

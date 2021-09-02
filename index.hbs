@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang=en>
+	<head>
+		<title>{{metadata.title}}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">{{profile.name}}</h1>
+							<p>{{profile.role.short}}</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+                                {{#each highlights}}
+								<li><a href="{{reference}}" id="{{id}}-link"><span class="icon solid {{icon}}">{{name}}</span></a></li>
+                                {{/each}}
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+                            {{#each profile.social}}
+							<li><a href="{{url}}" class="icon brands {{icon}}"><span class="label">{{name}}</span></a></li>
+                            {{/each}}
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">{{{profile.about.tagLine}}}</h2>
+								<p>{{{profile.role.long}}}</p>
+							</header>
+
+							<footer>
+								<a href="#about" class="button scrolly">Explore</a>
+							</footer>
+
+						</div>
+						<credits class="background light">
+							Photo by <a href="https://unsplash.com/@joannakosinska?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joanna Kosinska</a> on <a href="https://unsplash.com/s/photos/pencil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+						</credits>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="two">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+							<a href="#" class="image credits"><img src="images/banner-about.jpg" alt="About Me" /></a>
+							<credits class="follow dark">
+								Photo by <a href="https://unsplash.com/@olenkasergienko?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Olena Sergienko</a> on <a href="https://unsplash.com/s/photos/book-and-coffee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+							</credits>
+
+                            {{#each profile.about.description}}
+                            <p>{{{this}}}</p>
+                            {{/each}}
+						</div>
+					</section>
+
+
+				<!-- Portfolio -->
+				<section id="projects" class="three">
+					<div class="container">
+
+						<header>
+							<h2>Projects</h2>
+						</header>
+
+						<p>{{{work.description}}}</p>
+
+						<div class="row">
+                            {{#each work.projects}}
+                                {{#if_mod @index 2 0}}
+							<div class="col-4 col-12-mobile">
+                                {{/if_mod}}
+								<article class="item">
+									<a href="#{{id}}" class="image fit"><img src="images/{{picture}}" alt="" /></a>
+									<header>
+										<h3>{{name}}</h3>
+									</header>
+								</article>
+                                {{#if_mod @index 2 1}}
+							</div>
+                                {{/if_mod}}
+                            {{/each}}
+						</div>
+
+					</div>
+				</section>
+
+				<section id="accolades" class="four">
+					<div class="container">
+
+						<header>
+							<h2>Accolades</h2>
+						</header>
+
+						<p>{{{work.accolades.description}}}</p>
+
+                        {{#each work.accolades.badges}}
+                        {{#if_mod @index 3 0}}
+						<div class="row">
+                        {{/if_mod}}
+							<div class="col-4 col-12-mobile">
+								<a href="{{url}}">
+									<img src="{{picture}}" alt="{{name}}"/>
+								</a>
+								<p class="title">{{name}}</p>
+								<p class="subtitle">{{issuer}}</p>
+							</div>
+                        {{#if_mod @index 3 2}}
+						</div>
+                        {{/if_mod}}
+                        {{/each}}
+					</div>
+				</section>
+
+				<!-- Contact -->
+					<section id="contact" class="five">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>{{{profile.about.contact}}}</p>
+
+
+						</div>
+					</section>
+
+                <!-- Project Sections --->
+                {{#each work.projects}}
+
+					<section id="{{id}}">
+						<div class="container">
+							<header>
+								<h2>{{name}}</h2>
+								<p class="tags">
+                                    {{#each tags}}
+                                    <tag>{{this}}</tag> 
+                                    {{/each}}
+                                </p>
+							</header>
+
+                            {{#each description}}
+							<p>{{{this}}}</p>
+                            {{/each}}
+							<footer>
+								<a href="#projects" class="button scrolly">Back to Projects</a>
+							</footer>
+
+						</div>
+					</section>
+                {{/each}}
+			</div>
+
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; This website is based on <a href="https://pixelarity.com/prologue">prologue</a>.</li><li>Designed by: <a href="https://pixelarity.com">Pixelarity</a>.</li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="./bundle.js"></script>
+    </body>
+</html>
