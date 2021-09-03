@@ -65,7 +65,7 @@
         "reference": "#contact"
     }],
     "work" : {
-        "description" : "I have been thinkering with distributed systems for more than 18 years. This is a selection of the most interesting and relevant projects I have been working on. Recently, my focus has been the use of Blockchain technologies to support enterprise use cases in the financial services domain.",
+        "description" : "I have been tinkering with distributed systems for more than 18 years. This is a selection of the most interesting and relevant projects I have been working on. Recently, my focus has been the use of Blockchain technologies to support enterprise use cases in the financial services domain.",
         "projects" : [{
             "id" :  "lygon",
             "name" : "Lygon",
